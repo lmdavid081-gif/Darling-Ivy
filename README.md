@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ivie 💗 Streak Partner?</title>
+<title>Ivie 🔥 TikTok Streak</title>
 
 <style>
 * {
@@ -15,100 +15,128 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
   overflow: hidden;
-  font-family: "Trebuchet MS", sans-serif;
-  background: linear-gradient(135deg, #ffe0ec, #f8a5c2, #ffc8dd);
-  color: #702344;
-}
-
-.heart {
-  position: fixed;
-  bottom: -40px;
-  pointer-events: none;
-  animation: floatUp linear infinite;
-  opacity: 0.6;
-  z-index: 0;
-}
-
-@keyframes floatUp {
-  to {
-    transform: translateY(-115vh) rotate(360deg);
-    opacity: 0;
-  }
 }
 
 .card {
-  position: relative;
-  z-index: 2;
-  width: 90%;
-  max-width: 420px;
-  padding: 30px 22px;
+  width: 100%;
+  max-width: 390px;
+  padding: 32px 22px;
   text-align: center;
-  border-radius: 28px;
-  background: rgba(255,255,255,0.92);
-  box-shadow: 0 15px 45px #a83d6650;
+  background: #171717;
+  border: 1px solid #333;
+  border-radius: 25px;
+  box-shadow: 0 0 35px #fe2c5530;
+  position: relative;
+  overflow: hidden;
 }
 
-.emoji {
-  font-size: 65px;
-  animation: bounce 1.5s infinite;
+.tiktok {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  text-shadow: -3px 0 #25f4ee, 3px 0 #fe2c55;
 }
 
-@keyframes bounce {
-  50% { transform: translateY(-8px); }
+.flame {
+  font-size: 78px;
+  margin: 12px 0;
+  animation: burn 0.8s infinite alternate;
+  filter: drop-shadow(0 0 15px #ff5a00);
+}
+
+@keyframes burn {
+  from { transform: scale(1) rotate(-4deg); }
+  to { transform: scale(1.12) rotate(4deg); }
 }
 
 h1 {
-  font-size: 30px;
-  margin: 12px 0;
+  font-size: 29px;
+  margin: 8px 0;
+}
+
+h1 span {
+  color: #ff6333;
 }
 
 p {
-  font-size: 16px;
+  color: #c7c7c7;
   line-height: 1.7;
+  font-size: 15px;
+}
+
+.streak {
+  margin: 20px auto;
+  padding: 13px;
+  background: #242424;
+  border-radius: 14px;
+  border: 1px solid #444;
+  color: #ff8b40;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 14px;
-  margin-top: 28px;
+  gap: 12px;
+  margin-top: 25px;
   min-height: 55px;
 }
 
 button {
   border: none;
-  padding: 13px 23px;
   border-radius: 30px;
+  padding: 14px 25px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  touch-action: manipulation;
 }
 
 #yes {
   color: white;
-  background: #ed4b86;
-  box-shadow: 0 5px 12px #ed4b8650;
+  background: linear-gradient(135deg, #fe2c55, #ff6933);
+  box-shadow: 0 4px 15px #fe2c5540;
 }
 
 #no {
-  background: #f3e8ed;
-  color: #702344;
-  position: fixed;
-  z-index: 5;
+  background: #333;
+  color: white;
 }
 
 #result {
   display: none;
+  margin-top: 20px;
+  color: #ff8750;
+  font-weight: bold;
+  line-height: 1.7;
 }
 
 .small {
-  font-size: 12px;
-  opacity: 0.7;
+  font-size: 11px;
+  color: #777;
+  margin-top: 25px;
+}
+
+.particle {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: rise 3s linear forwards;
+  z-index: 10;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(25deg);
+    opacity: 0;
+  }
 }
 </style>
 </head>
@@ -116,109 +144,82 @@ button {
 <body>
 
 <div class="card">
-  <div class="emoji">💌</div>
+  <div class="tiktok">TikTok</div>
 
-  <h1>Hey, Ivie! 💗</h1>
+  <div class="flame">🔥</div>
 
-  <p>
-    I have an extremely important question to ask you.
-    Please take a deep breath and prepare yourself. 😭😂
-  </p>
+  <h1>Hey, <span>Ivie!</span> ❤️‍🔥</h1>
 
   <p>
-    Will you do me the honour of becoming
-    <b>my official streak partner?</b> 🔥📱
+    I have an important question for you.<br>
+    Are you ready to be my official TikTok
+    streak partner? 👀💕
   </p>
+
+  <div class="streak">
+    🔥 0 DAYS — OUR STREAK STARTS HERE!
+  </div>
 
   <p>
-    Daily snaps, random pictures, unserious updates
-    and absolutely no letting our streak die. 😌❤️
+    Daily messages, random videos, funny posts
+    and absolutely no letting our streak die. 😂❤️
   </p>
 
-  <h3>So, Ivie... deal? 🥹</h3>
+  <h3>Will you keep the 🔥 alive with me?</h3>
 
-  <div class="buttons" id="buttons">
-    <button id="yes" onclick="sayYes()">YESSS! 💖</button>
-    <button id="no">NO 😭</button>
+  <div class="buttons">
+    <button id="yes" onclick="accept()">YESSS! 🔥</button>
+    <button id="no" onclick="moveNo()">No 🙄</button>
   </div>
 
   <div id="result">
-    <div class="emoji">🥳💗🔥</div>
-    <h1>IT'S OFFICIAL!!</h1>
-    <p>
-      IVIE SAID YESSS! 😭❤️
-      <br>
-      Our streak era begins NOW.
-      No excuses, no disappearing,
-      and no letting that fire die! 🔥
-    </p>
-    <p>Best streak partners loading... 💌</p>
+    YAYYYYY! 😭❤️‍🔥<br>
+    Ivie + Me = TikTok streak partners! 🔥<br>
+    Now go and send me that first TikTok message. 😂💗
   </div>
 
-  <p class="small">Made with questionable levels of effort 😂💕</p>
+  <div class="small">
+    MADE WITH ❤️ JUST FOR IVIE
+  </div>
 </div>
 
 <script>
-const noBtn = document.getElementById("no");
-
-function moveNo() {
-  const maxX = Math.max(0, window.innerWidth - noBtn.offsetWidth - 12);
-  const maxY = Math.max(0, window.innerHeight - noBtn.offsetHeight - 12);
-
-  noBtn.style.left = (Math.random() * maxX) + "px";
-  noBtn.style.top = (Math.random() * maxY) + "px";
-}
-
-noBtn.addEventListener("mouseenter", moveNo);
-noBtn.addEventListener("touchstart", function(e) {
-  e.preventDefault();
-  moveNo();
-}, { passive: false });
-
-noBtn.addEventListener("click", moveNo);
-
-function sayYes() {
-  document.getElementById("buttons").style.display = "none";
-  noBtn.style.display = "none";
+function accept() {
   document.getElementById("result").style.display = "block";
+  document.getElementById("no").style.display = "none";
+  document.getElementById("yes").innerText = "STREAK PARTNERS! 🔥";
 
   for (let i = 0; i < 35; i++) {
-    const heart = document.createElement("div");
-    heart.textContent = ["💖", "💕", "🔥", "💗", "✨"][
-      Math.floor(Math.random() * 5)
-    ];
-    heart.style.position = "fixed";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = Math.random() * 100 + "vh";
-    heart.style.fontSize = "25px";
-    heart.style.zIndex = "10";
-    heart.style.pointerEvents = "none";
-    document.body.appendChild(heart);
-
-    heart.animate([
-      { transform: "translateY(0) scale(0.5)", opacity: 1 },
-      { transform: "translateY(-180px) scale(1.5)", opacity: 0 }
-    ], {
-      duration: 1800 + Math.random() * 1500,
-      easing: "ease-out"
-    }).onfinish = () => heart.remove();
+    setTimeout(createParticle, i * 70);
   }
 }
 
-// Create floating background hearts
-for (let i = 0; i < 22; i++) {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.textContent = Math.random() > 0.5 ? "💗" : "💕";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (5 + Math.random() * 8) + "s";
-  heart.style.animationDelay = (Math.random() * 8) + "s";
-  heart.style.fontSize = (16 + Math.random() * 22) + "px";
-  document.body.appendChild(heart);
+function moveNo() {
+  const btn = document.getElementById("no");
+
+  btn.style.position = "fixed";
+  btn.style.left = Math.random() *
+    (window.innerWidth - btn.offsetWidth - 20) + "px";
+  btn.style.top = Math.random() *
+    (window.innerHeight - btn.offsetHeight - 20) + "px";
 }
 
-// Put the No button somewhere visible at first
-moveNo();
+function createParticle() {
+  const particle = document.createElement("div");
+  particle.className = "particle";
+
+  const emojis = ["🔥", "❤️", "💕", "✨", "💗"];
+  particle.textContent = emojis[
+    Math.floor(Math.random() * emojis.length)
+  ];
+
+  particle.style.left = Math.random() * 100 + "vw";
+  particle.style.fontSize = (18 + Math.random() * 22) + "px";
+
+  document.body.appendChild(particle);
+
+  setTimeout(() => particle.remove(), 3000);
+}
 </script>
 
 </body>
